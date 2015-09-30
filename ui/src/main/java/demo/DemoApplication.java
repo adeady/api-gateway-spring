@@ -22,13 +22,14 @@ import java.util.UUID;
 @RestController
 public class DemoApplication {
 
-    @RequestMapping("/resource")
-    public Map<String,Object> home() {
-      Map<String,Object> model = new HashMap<String,Object>();
-      model.put("id", UUID.randomUUID().toString());
-      model.put("content", "Hello World");
-      return model;
-    }
+    //moved to resource server
+//    @RequestMapping("/resource")
+//    public Map<String,Object> home() {
+//      Map<String,Object> model = new HashMap<String,Object>();
+//      model.put("id", UUID.randomUUID().toString());
+//      model.put("content", "Hello World");
+//      return model;
+//    }
     
     @RequestMapping("/user")
       public Principal user(Principal user) {
