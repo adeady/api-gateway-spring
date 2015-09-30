@@ -6,16 +6,17 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
         classpath('io.spring.gradle:dependency-management-plugin:0.5.2.RELEASE')
     }
 }
 
 apply plugin: 'java'
+apply plugin: 'groovy'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'spring-boot'
-apply plugin: 'io.spring.dependency-management'
+apply plugin: 'spring-boot' 
+apply plugin: 'io.spring.dependency-management' 
 
 jar {
     baseName = 'demo'
@@ -26,16 +27,20 @@ targetCompatibility = 1.7
 
 repositories {
     mavenCentral()
-
 }
 
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-security'
     compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.springframework.cloud:spring-cloud-starter-zuul:1.0.3.RELEASE'
 
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile 'org.codehaus.groovy:groovy-all:2.3.10'
+
+    compile 'org.springframework.security.oauth:spring-security-oauth2:2.0.7.RELEASE'
+
+
+
+    testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
 
 
