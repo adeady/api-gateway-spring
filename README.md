@@ -20,10 +20,10 @@ Using default security password: 4fda5d23-3103-42e8-b94e-6a91f0759302
 ```
 
 3. navigate to the ui homepage at `http://localhost:8080/`
-4. click login.  Login with **user**: *user* **password**: *<copied from log>*
+4. click login.  Login with **user**: *user* **password**: *~copied from log~*
 5. you should be navigated back to the homepage with a filled in message.  The content from the message is served from the resource service.
 
 # TODO:
-[ ] stop making you check accept for user client at loging
-[ ] allow user to create account on auth service
-[ ] create design diagram with arrows explaining web traffic
+- [ ] stop making you check accept for user client at loging
+- [ ] allow user to create account on auth service
+- [ ] create design diagram with arrows explaining web traffic
