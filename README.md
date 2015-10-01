@@ -24,6 +24,7 @@ Using default security password: 4fda5d23-3103-42e8-b94e-6a91f0759302
 5. you should be navigated back to the homepage with a filled in message.  The content from the message is served from the resource service.
 
 # TODO:
-- [ ] stop making you check accept for user client at loging
+- [x] ~~stop making you check accept for user client at loging~~ Turns out the user only accepts once.
+  - [ ] understand how the domain model is accessed 
 - [ ] allow user to create account on auth service
 - [ ] create design diagram with arrows explaining web traffic
