@@ -1,3 +1,15 @@
 server:
     port: 9999
     contextPath: /uaa
+
+spring:
+    datasource:
+        platform: postgres
+        driverClassName: org.postgresql.Driver
+        url: jdbc:postgresql://localhost/demo-security
+        username: demo
+        password: demo
+        ssl: true
+    jpa:
+        hibernate:
+            ddl-auto: update
