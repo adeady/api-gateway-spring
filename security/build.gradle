@@ -31,14 +31,15 @@ repositories {
 
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-security'
-    compile 'org.springframework.boot:spring-boot-starter-web'
-
     compile 'org.codehaus.groovy:groovy-all:2.3.10'
 
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
+
+    compile 'org.springframework.boot:spring-boot-starter-security'
     compile 'org.springframework.security.oauth:spring-security-oauth2:2.0.7.RELEASE'
 
-
+    runtime 'com.h2database:h2:1.0.60'
 
     testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
