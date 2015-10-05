@@ -139,7 +139,9 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.iai.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.iai.UserRole'
 grails.plugin.springsecurity.authority.className = 'com.iai.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	'/':                              ['permitAll'],
+        '/oauth/authorize.dispatch':      ["isFullyAuthenticated() and (request.getMethod().equals('GET') or request.getMethod().equals('POST'))"],
+        '/oauth/token.dispatch':          ["isFullyAuthenticated() and request.getMethod().equals('POST')"],
+        '/':                              ['permitAll'],
 	'/index':                         ['permitAll'],
 	'/index.gsp':                     ['permitAll'],
 	'/assets/**':                     ['permitAll'],
