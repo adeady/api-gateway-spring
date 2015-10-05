@@ -24,7 +24,7 @@ class BootStrap {
                 authorizedGrantTypes: ['authorization_code', 'refresh_token', 'implicit', 'password', 'client_credentials'],
                 authorities: ['ROLE_CLIENT'],
                 scopes: ['read', 'write'],
-                redirectUris: ['http://myredirect.com']
+                redirectUris: ['http://example.com']
         ).save(flush: true)
 
     }
