@@ -23,8 +23,21 @@ Using default security password: 4fda5d23-3103-42e8-b94e-6a91f0759302
 4. click login.  Login with **user**: *user* **password**: *~copied from log~*
 5. you should be navigated back to the homepage with a filled in message.  The content from the message is served from the resource service.
 
+## Flow:
+
+1. sign-in:
+http://localhost:9999/uaa/oauth/authorize?client_id=acme&redirect_uri=http://localhost:8080/login&response_type=code
+> note: client_id and redirect_uri will be specific to the mobile app
+
+> pay attention to the XSRF-TOKEN cookie, you will need to copy it and paste it into the header below
+
+2. GET on resource token: http://localhost:8080/resource with header `X-XSRF-TOKEN:(copied XSRF-TOKEN)`
+
 # TODO:
 - [x] ~~stop making you check accept for user client at loging~~ Turns out the user only accepts once.
-  - [ ] understand how the domain model is accessed 
+  - [ ] understand how the domain model is accessed
+- [x] get pure http calls working so that I know how to call stuffs
+- [ ] get h2 working with security service again
+- [ ] create script to at least fire up auth service and rest service
 - [ ] allow user to create account on auth service
 - [ ] create design diagram with arrows explaining web traffic
