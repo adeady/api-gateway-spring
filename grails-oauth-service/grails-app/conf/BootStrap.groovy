@@ -27,6 +27,7 @@ class BootStrap {
                 redirectUris: ['http://example.com']
         ).save(flush: true)
 
+        println Client.list()
     }
     def destroy = {
     }

@@ -133,7 +133,6 @@ grails.plugin.springsecurity.filterChain.chainMap = [
         '/**': 'JOINED_FILTERS,-statelessSecurityContextPersistenceFilter,-oauth2ProviderFilter,-clientCredentialsTokenEndpointFilter,-oauth2BasicAuthenticationFilter,-oauth2ExceptionTranslationFilter'
 ]
 
-
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.iai.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.iai.UserRole'
@@ -150,4 +149,12 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/images/**':                  ['permitAll'],
 	'/**/favicon.ico':                ['permitAll']
 ]
+
+
+
+// Added by the Spring Security OAuth2 Provider plugin:
+grails.plugin.springsecurity.oauthProvider.clientLookup.className = 'com.iai.Client'
+grails.plugin.springsecurity.oauthProvider.authorizationCodeLookup.className = 'com.iai.AuthorizationCode'
+grails.plugin.springsecurity.oauthProvider.accessTokenLookup.className = 'com.iai.AccessToken'
+grails.plugin.springsecurity.oauthProvider.refreshTokenLookup.className = 'com.iai.RefreshToken'
 
